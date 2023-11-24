@@ -75,7 +75,7 @@ console.log(Math.round(newRadius), "meters");
 
 //********** Part III start **********
 
-//using a try.....catch 
+//using a try.....catch
 try {
   if (gardenArea > newGardenArea) {
     throw Error(

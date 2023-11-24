@@ -47,18 +47,24 @@ If the space remained circular, what would be the radius of this expanded garden
 The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden.
 Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message.
 
-https://github.com/kaidecoder/308.2.1
+https://github.com/kaidecoder/308.2.1C
 
 ### SOLUTION:
 
+
 - 1 week of growth
-  ![modal image](./images)
+  ![modal image](./images/Screenshot%202023-11-24%20at%203.18.28%E2%80%AFPM.png)
+- 1 week of growth
+  ![modal image](./images/Screenshot%202023-11-24%20at%203.19.31%E2%80%AFPM.png)
 
 - 2 weeks of growth
-  ![modal image](/images/)
+  ![modal image](/images/Screenshot%202023-11-24%20at%203.20.24%E2%80%AFPM.png)
+- 2 weeks of growth
+  ![modal image](/images/Screenshot%202023-11-24%20at%203.20.51%E2%80%AFPM.png)
 
 - 3 weeks of growth
-  ![modal image](/images)
+  ![modal image](/images/Screenshot%202023-11-24%20at%203.21.22%E2%80%AFPM.png)
+- 3 weeks of growth
+  ![modal image](/images/Screenshot%202023-11-24%20at%203.20.51%E2%80%AFPM.png)
 
-- Same
-  ![modal image](/images/)
+
