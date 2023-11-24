@@ -1,0 +1,4 @@
+*.txt
+.prettierrc
+.prettierignore
+node_modules
