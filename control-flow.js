@@ -70,6 +70,11 @@ let additionalSpace = newGardenArea - gardenArea;
 let newRadius = Math.round(Math.sqrt(newGardenArea / PI));
 console.log(Math.round(additionalSpace), "square meters");
 console.log(Math.round(newRadius), "meters");
+ModalWindow.openModal({
+  title: "",
+  content: `Thinking Bigger:  
+  The amount of additional space required if the area started with 100 plants and wasn't pruned for 10 weeks is ${(newGardenArea - gardenArea).toLocaleString('en-US')} square meters. If the space is circular, then the radius of the new garden would be ${Math.round(Math.sqrt(newGardenArea / PI)).toLocaleString('en-US')} meters.`,
+});
 
 //************ Part II end ************
 
@@ -87,7 +92,21 @@ try {
 } catch (error) {
   console.log(error.message);
 }
-
+ModalWindow.openModal({
+  title: "",
+  content: `Errors in Judgment:
+  try {
+    if (gardenArea > newGardenArea) {
+      throw Error(
+        "Not possible since we started with fewer plants for a smaller radius.",
+      );
+    } else {
+      throw Error("It's hard to beat 4 million plus square meters");
+    }
+  } catch (error) {
+    console.log(error.message);
+  }`,
+});
 //********* Part III end **********
 
 ModalWindow.openModal({
@@ -120,7 +139,7 @@ try {
     );
     continue;
   }
-  let numberOfPlants = Math.round(initialNumberOfPlants * 3 ** weeksOfGrowth);
+  let numberOfPlants = Math.round(newInitialNumberOfPlants * 3 ** weeksOfGrowth);
 
   ModalWindow.openModal({
     title: "",

@@ -67,4 +67,10 @@ https://github.com/kaidecoder/308.2.1C
 - 3 weeks of growth
   ![modal image](/images/Screenshot%202023-11-24%20at%203.20.51%E2%80%AFPM.png)
 
+- Thinking Bigger
+  ![modal image](/images/Screenshot%202023-11-24%20at%206.24.49%E2%80%AFPM.png)
+
+- Errors in Judgement
+  ![modal image](/images/Screenshot%202023-11-24%20at%206.26.28%E2%80%AFPM.png)
+
 
