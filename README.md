@@ -51,7 +51,6 @@ https://github.com/kaidecoder/308.2.1C
 
 ### SOLUTION:
 
-
 - 1 week of growth
   ![modal image](./images/Screenshot%202023-11-24%20at%203.18.28%E2%80%AFPM.png)
 - 1 week of growth
@@ -72,5 +71,3 @@ https://github.com/kaidecoder/308.2.1C
 
 - Errors in Judgement
   ![modal image](/images/Screenshot%202023-11-24%20at%206.26.28%E2%80%AFPM.png)
-
-

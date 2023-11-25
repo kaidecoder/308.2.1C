@@ -1,3 +1,4 @@
+//Make a modal to use instead of the alert box: https://youtu.be/q8gv3B3DBoo?si=8rv3M6jJTFErrcwl
 const ModalWindow = {
   init() {
     document.body.addEventListener("click", (e) => {
@@ -64,7 +65,7 @@ let newWeeksOfGrowth = 10;
 let newInitialNumberOfPlants = 100;
 //time in weeks
 let newNumberOfPlants = newInitialNumberOfPlants * 3 ** newWeeksOfGrowth;
-//we know how many plants there are in the area, and the area of one plant
+//we know how many plants there are in the area, and the area of one plant, we can find the new Garden area
 let newGardenArea = newNumberOfPlants * plantArea;
 let additionalSpace = newGardenArea - gardenArea;
 let newRadius = Math.round(Math.sqrt(newGardenArea / PI));
@@ -73,7 +74,13 @@ console.log(Math.round(newRadius), "meters");
 ModalWindow.openModal({
   title: "",
   content: `Thinking Bigger:  
-  The amount of additional space required if the area started with 100 plants and wasn't pruned for 10 weeks is ${(newGardenArea - gardenArea).toLocaleString('en-US')} square meters. If the space is circular, then the radius of the new garden would be ${Math.round(Math.sqrt(newGardenArea / PI)).toLocaleString('en-US')} meters.`,
+  The amount of additional space required if the area started with 100 plants and wasn't pruned for 10 weeks is ${(
+    newGardenArea - gardenArea
+  ).toLocaleString(
+    "en-US",
+  )} square meters. If the space is circular, then the radius of the new garden would be ${Math.round(
+    Math.sqrt(newGardenArea / PI),
+  ).toLocaleString("en-US")} meters.`,
 });
 
 //************ Part II end ************
@@ -129,7 +136,7 @@ ModalWindow.openModal({
 });
 
 let weeksOfGrowth;
-
+//check for 0, undefined, null, an empty string being entered by the user and keep prompting user to enter a number
 try {
   while (weeksOfGrowth == null || weeksOfGrowth == "") {
     weeksOfGrowth = Number(
@@ -139,12 +146,13 @@ try {
     );
     continue;
   }
-  let numberOfPlants = Math.round(newInitialNumberOfPlants * 3 ** weeksOfGrowth);
+  let numberOfPlants = Math.round(initialNumberOfPlants * 3 ** weeksOfGrowth);
 
   ModalWindow.openModal({
     title: "",
     content: `Thank you for entering a valid number.  You entered ${weeksOfGrowth} week(s) ✅.`,
   });
+  //separate the code into two sections - either we're greater than or equal to maximum capacity or we are not.  At maximum capacity or greater, we prune
   if (numberOfPlants >= maximumCapacity) {
     ModalWindow.openModal({
       title: "",
@@ -153,6 +161,7 @@ try {
       )} plant(s)!!`,
     });
     prune();
+    //Here we're below maximum capacity, so we divide this section into two again.  Either we're more than 50 percent of maximum capacity, or we aren't(plant).  If we are more than 50% capacity, then we do a nested if...then to check if we are also less than 80% capacity. Then we divide that nested if..then into two parts, either we're less that 80%(monitor) or we aren't.
   } else {
     ModalWindow.openModal({
       title: "",
@@ -184,22 +193,28 @@ try {
   }
 } catch (error) {
   ModalWindow.openModal({
-    title: "Error",
+    title: "",
     content: `error.message`,
   });
 }
+
+//function to prune the plants
 function prune() {
   return ModalWindow.openModal({
     title: "",
     content: `It is time to prune those plants!!!`,
   });
 }
+
+//function to plant
 function plant() {
   return ModalWindow.openModal({
     title: "",
     content: `It is time for planting new plants!!!`,
   });
 }
+
+//function to monitor the plants
 function monitor() {
   return ModalWindow.openModal({
     title: "",
